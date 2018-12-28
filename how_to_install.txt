@@ -1,0 +1,10 @@
+Just drop index.php where you want to install Simple Script and visit your site.
+
+If you uploaded to your sites main web folder just visit for example www.example.com.
+
+You will need PHP GZIP installed on the server.
+To install PHP ZIP on your server just run the following command if Ubuntu based.
+
+sudo apt-get install php7.0-zip
+sudo phpenmod zip
+sudo service apache2 restart
