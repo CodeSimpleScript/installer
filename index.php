@@ -115,9 +115,11 @@ function percent($num_amount, $num_total) {
       						$copy=true;
       					}
       					if ($copy==true){
-      						mkdir(dirname($whatIWant), 0777, true);
-      						copy("zip://".$path."#".$filename, $whatIWant);
-      						nhlog("File copy ".$filename." with ID ".$i.", part ".$p.".");
+                  if ($whatIWant!=""){
+        						mkdir(dirname($whatIWant), 0777, true);
+                    nhlog("File copy ".$filename." with ID ".$i.", part ".$p.". Name: ".$whatIWant."");
+      						  copy("zip://".$path."#".$filename, $whatIWant);
+                  }
       					}
       				}else{
       					nhlog("File skip ".$filename." with ID ".$i.", part ".$p.". - We dont install the following files");
